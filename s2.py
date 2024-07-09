@@ -107,7 +107,7 @@ for data_point in generate_real_time_data(normal_interval):
         break
     
     prediction = monitor_machinery(data_point, data_point['faulty'], model)
-    if prediction == 1:
+    if prediction == 0:
         print("Alert: Potential failure detected!", data_point)
     else:
         print("All systems normal.", data_point)
